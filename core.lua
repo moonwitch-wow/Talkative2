@@ -20,6 +20,10 @@ function Talkative2.PLAYER_LEAVING_WORLD(...)
  -- handle PLAYER_LEAVING_WORLD here
 end
 
+-- ClassColors
+function Talkative2.UPDATE_CHAT_COLOR_NAME_BY_CLASS(self,event,type,set,...)
+  if not set then SetChatColorNameByClass(type,true); end
+end
 ------------------------------------------------------------------------
 -- Many Whelps, handle Events
 ------------------------------------------------------------------------
