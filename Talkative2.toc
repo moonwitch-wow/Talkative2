@@ -1,0 +1,28 @@
+## Interface: 60000
+
+## Title: Talkative2
+## Notes: Reiteration of Talkative compliant with 6.0.2
+## Author: Kelly Crabbé AKA MoonWitch
+## Version: 0.1a
+## X-Website: https://github.com/moonwitch/Talkative2
+## X-Email: kelly.crabbe@gmail.com
+## X-Curse-Project-ID: Talkative2
+## X-WoWI-ID: xxx
+
+# Dependencies:
+# OptionalDeps:
+
+# LoadOnDemand: 0|1
+# LoadWith:
+
+#SavedVariables:
+#SavedVariablesPerCharachter:
+
+altinvite.lua
+channelnames.lua
+urlcopy.lua
+sticky.lua
+setup.lua
+flash.lua
+visual.lua
+core.lua
