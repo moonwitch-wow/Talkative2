@@ -39,7 +39,7 @@ local _G = _G
 local function colorizeNow(self)
   if(self:IsMouseOver()) then
     self:GetFontString():SetTextColor(0, 0.6, 1)
-    self:GetFontString():SetFont(font, fontSize + 1, nil)
+    self:GetFontString():SetFont(STANDARD_TEXT_FONT, 10, nil)
   elseif(self.alerting) then
     self:GetFontString():SetTextColor(1, 0, 0)
   elseif(self:GetID() == SELECTED_CHAT_FRAME:GetID()) then
@@ -68,7 +68,7 @@ function Talkative2.Tabify( ... )
 
   for i = 1, NUM_CHAT_WINDOWS do
     local tab = _G["ChatFrame"..i.."Tab"]
-    tab:GetFontString():SetFont(STANDARD_TEXT_FONT, 12, nil)
+    tab:GetFontString():SetFont(STANDARD_TEXT_FONT, 10, nil)
     tab:GetFontString():SetShadowOffset(1, -1)
 
     tab.leftTexture:SetTexture(nil)
