@@ -19,11 +19,12 @@
 #SavedVariables:
 #SavedVariablesPerCharachter:
 
-altinvite.lua
-channelnames.lua
-urlcopy.lua
-sticky.lua
 setup.lua
 flash.lua
 visual.lua
 core.lua
+
+modules/altinvite.lua
+modules/channelnames.lua
+modules/urlcopy.lua
+modules/sticky.lua

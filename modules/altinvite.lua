@@ -1,3 +1,4 @@
+-- Blatantly ripped from rChat, don't like to reinvent the wheel
 local origSetItemRef = SetItemRef
 SetItemRef = function(link, text, button)
   local linkType = string.sub(link, 1, 6)
