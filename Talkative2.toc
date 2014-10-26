@@ -3,8 +3,8 @@
 ## Title: Talkative2
 ## Notes: Reiteration of Talkative compliant with 6.0.2
 ## Author: Kelly Crabbé AKA MoonWitch
-## Version: 0.1a
-## Credits: Phanx, P3lim, zork and haste
+## Version: 60000.1
+## X-Credits: Phanx, P3lim, zork and haste
 ## X-Website: https://github.com/moonwitch/Talkative2
 ## X-Email: kelly.crabbe@gmail.com
 ## X-Curse-Project-ID: Talkative2
