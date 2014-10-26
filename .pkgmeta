@@ -1,0 +1,6 @@
+package-as: Talkative2
+
+ignore:
+    - .gitignore
+
+license-output: LICENSE.txt
