@@ -22,8 +22,8 @@ function Talkative2.skin(frame)
   frame:SetClampedToScreen(false) -- allows moving to edge of screen
   frame:SetClampRectInsets(0,0,0,0) -- allows moving to edge of screen
 
-  FCF_SetWindowAlpha(frame, .1)
-  FCF_SetLocked(frame, 1)
+  FCF_SetWindowAlpha(_G[frame:GetName()], .1)
+  FCF_SetLocked(_G[frame:GetName()], 1)
 
   local editbox = _G[frame:GetName() .. "EditBox"]
   editbox:SetAltArrowKeyMode(false)
