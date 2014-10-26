@@ -53,45 +53,30 @@ local function loopOver(self)
   colorizeNow(_G[self:GetName()..'Tab'])
 end
 
-function Talkative2.Tabify( ... )
-  ChatTypeInfo["WHISPER"].flashTab = true
-  ChatTypeInfo["GUILD"].flashTab = true
-  ChatTypeInfo["OFFICER"].flashTab = true
-  ChatTypeInfo["RAID"].flashTab = true
-  ChatTypeInfo["PARTY"].flashTab = true
-  ChatTypeInfo["RAID_LEADER"].flashTab = true
-  ChatTypeInfo["PARTY_LEADER"].flashTab = true
-  ChatTypeInfo["INSTANCE_CHAT"].flashTab = true
-  ChatTypeInfo["INSTANCE_CHAT_LEADER"].flashTab = true
-  ChatTypeInfo["BN_WHISPER"].flashTab = true
-  ChatTypeInfo["BN_CONVERSATION"].flashTab = true
+function Talkative2.Tabify(tab)
+  tab:GetFontString():SetFont(STANDARD_TEXT_FONT, 10, nil)
+  tab:GetFontString():SetShadowOffset(1, -1)
 
-  for i = 1, NUM_CHAT_WINDOWS do
-    local tab = _G["ChatFrame"..i.."Tab"]
-    tab:GetFontString():SetFont(STANDARD_TEXT_FONT, 10, nil)
-    tab:GetFontString():SetShadowOffset(1, -1)
+  tab.leftTexture:SetTexture(nil)
+  tab.middleTexture:SetTexture(nil)
+  tab.rightTexture:SetTexture(nil)
 
-    tab.leftTexture:SetTexture(nil)
-    tab.middleTexture:SetTexture(nil)
-    tab.rightTexture:SetTexture(nil)
+  tab.leftHighlightTexture:SetTexture(nil)
+  tab.middleHighlightTexture:SetTexture(nil)
+  tab.rightHighlightTexture:SetTexture(nil)
 
-    tab.leftHighlightTexture:SetTexture(nil)
-    tab.middleHighlightTexture:SetTexture(nil)
-    tab.rightHighlightTexture:SetTexture(nil)
+  tab.leftSelectedTexture:SetTexture(nil)
+  tab.middleSelectedTexture:SetTexture(nil)
+  tab.rightSelectedTexture:SetTexture(nil)
 
-    tab.leftSelectedTexture:SetTexture(nil)
-    tab.middleSelectedTexture:SetTexture(nil)
-    tab.rightSelectedTexture:SetTexture(nil)
+  tab.glow:SetTexture(nil)
+  tab:SetAlpha(0)
 
-    tab.glow:SetTexture(nil)
-    tab:SetAlpha(0)
+  -- run it on login and on enter and on leave
+  tab:HookScript('OnEnter', colorizeNow)
+  tab:HookScript('OnLeave', colorizeNow)
 
-    -- run it on login and on enter and on leave
-    tab:HookScript('OnEnter', colorizeNow)
-    tab:HookScript('OnLeave', colorizeNow)
-
-    colorizeNow(tab)
-  end
+  colorizeNow(tab)
 
   CHAT_FRAME_TAB_SELECTED_NOMOUSE_ALPHA = .8
   CHAT_FRAME_TAB_NORMAL_NOMOUSE_ALPHA = .8
@@ -102,6 +87,9 @@ function Talkative2.Tabify( ... )
   hooksecurefunc('FCF_FadeOutChatFrame', loopOver)
 end
 
+for i = 1, NUM_CHAT_WINDOWS do
+  local tab = _G["ChatFrame"..i.."Tab"]
+end
 ------------------------------------------------------------------------
 -- Remove the 60s flash time limit
 ------------------------------------------------------------------------
