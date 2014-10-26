@@ -14,17 +14,16 @@ local frames = Talkative2.frames
 -- end
 
 function Talkative2.PLAYER_LOGIN(...)
+  DEFAULT_CHATFRAME_ALPHA = 0
+  -- making sure the toast window doesn't move offscreen ;)
+  BN_TOAST_LEFT_OFFSET = BN_TOAST_LEFT_OFFSET + ChatFrame1ButtonFrame:GetWidth() + 5
+
   Talkative2.Init()
 end
 
 function Talkative2.PLAYER_LEAVING_WORLD(...)
- -- handle PLAYER_LEAVING_WORLD here
+  FCF_SavePositionAndDimensions(ChatFrame1)
 end
-
--- Handler:RegisterEvent('PLAYER_LOGIN')
--- Handler:RegisterEvent('CHAT_MSG_WHISPER')
--- Handler:RegisterEvent('CHAT_MSG_BN_WHISPER')
--- Handler:RegisterEvent('CHAT_MSG_BN_CONVERSATION')
 
 -- ClassColors
 function Talkative2.UPDATE_CHAT_COLOR_NAME_BY_CLASS(self,event,type,set,...)
