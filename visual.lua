@@ -43,7 +43,7 @@ function Talkative2.skin(frame)
   editbox.header:SetShadowOffset(1, -1)
 
   local orig = editbox.SetTextInsets
-  editbox.SetTextInsets = function(self)
+  function editbox.SetTextInsets(self)
     orig(self, self.header:GetWidth(), 0, 0, 0)
   end
   frames[frame] = true
