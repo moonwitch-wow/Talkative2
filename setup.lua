@@ -74,6 +74,7 @@ function Talkative2.Init()
   ChatFrame_AddChannel(ChatFrame1, GENERAL)
   ChatFrame_AddChannel(ChatFrame1, "Trade")
 
+  FCF_SetWindowName(ChatFrame2, "LOG") -- CombatLog just requires a rename nothing else
 
   Talkative2.CreateChat("GLD",ChatFrame3)
   Talkative2.CreateChat("GRP",ChatFrame4)
