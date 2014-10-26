@@ -54,20 +54,15 @@ for i = 1, NUM_CHAT_WINDOWS do
 end
 
 ------------------------------------------------------------------------
---skin temporary chats
+--skin temporary chats - do NOT show pet combat log
 ------------------------------------------------------------------------
--- Set up a dirty hook to catch temporary windows and customize them when they are created:
--- local old_OpenTemporaryWindow = FCF_OpenTemporaryWindow
--- FCF_OpenTemporaryWindow = function(...)
---   local frame = old_OpenTemporaryWindow(...)
---   Talkative2.skin(frame)
---   return frame
--- end
-
-hooksecurefunc("FCF_OpenTemporaryWindow", function(...)
-  local cf = FCF_GetCurrentChatFrame():GetName() or nil
-  if cf then
-    Talkative2.skin(cf)
-    Talkative2.Tabify(cf)
-  end
-end)
+local open = FCF_OpenTemporaryWindow
+function FCF_OpenTemporaryWindow(chatType, ...)
+   if chatType == "PET_BATTLE_COMBAT_LOG" then
+      return
+   end
+   local frame = open(chatType, ...)
+    Talkative2.skin(frame)
+    Talkative2.Tabify(frame)
+   return frame
+end
