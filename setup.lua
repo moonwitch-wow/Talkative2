@@ -74,19 +74,6 @@ function Talkative2.Init()
   ChatFrame_AddChannel(ChatFrame1, GENERAL)
   ChatFrame_AddChannel(ChatFrame1, "Trade")
 
-  -----------------------------
-  -- Setup Log (combat log)
-  ChatFrame2Tab.Show = ChatFrame2Tab.Hide
-  ChatFrame2Tab:Hide()
-  FCF_SetWindowName(ChatFrame2, "LOG")
-  FCF_UnDockFrame(ChatFrame2)
-  ChatFrame2:SetJustifyH("RIGHT")
-  ChatFrame2:SetUserPlaced(true)
-  ChatFrame2:ClearAllPoints()
-  ChatFrame2:SetWidth(UIParent:GetWidth()/3.25)
-  ChatFrame2:SetHeight(math.floor(UIParent:GetHeight()/10)-31)
-  ChatFrame2:SetPoint("BOTTOMRIGHT", UIParent, "BOTTOMRIGHT", -8, 39)
-  ChatFrame2.SetPoint = function() end
 
   Talkative2.CreateChat("GLD",ChatFrame3)
   Talkative2.CreateChat("GRP",ChatFrame4)
