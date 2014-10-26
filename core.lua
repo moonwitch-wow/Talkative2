@@ -14,7 +14,6 @@ function Talkative2.PLAYER_ENTERING_WORLD(...)
 end
 
 function Talkative2.PLAYER_LOGIN(...)
-  Talkative2.Tabify()
   Talkative2.Init()
 end
 

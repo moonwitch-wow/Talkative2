@@ -34,6 +34,7 @@ local _, Talkative2 = ...
 local _G = _G
 
 local frames = Talkative2.frames
+
 ------------------------------------------------------------------------
 -- Enable tab flash, hide textures
 ------------------------------------------------------------------------
@@ -90,6 +91,7 @@ end
 
 for i = 1, NUM_CHAT_WINDOWS do
   local tab = _G["ChatFrame"..i.."Tab"]
+  Talkative2.Tabify(tab)
 end
 ------------------------------------------------------------------------
 -- Remove the 60s flash time limit
