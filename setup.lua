@@ -51,9 +51,9 @@ function Talkative2.Init()
   ChatFrameMenuButton:Hide()
 
   -- Fix Combat log
-  CombatLogQuickButtonFrame_Custom:HookScript("OnShow", CombatLogQuickButtonFrame_Custom.Hide)
-  CombatLogQuickButtonFrame_Custom:Hide()
-  CombatLogQuickButtonFrame_Custom:SetHeight(0)
+  -- CombatLogQuickButtonFrame_Custom:HookScript("OnShow", CombatLogQuickButtonFrame_Custom.Hide)
+  -- CombatLogQuickButtonFrame_Custom:Hide()
+  -- CombatLogQuickButtonFrame_Custom:SetHeight(0)
 
   FCF_ResetChatWindows() -- Resets all chat
   FCF_ValidateChatFramePosition = Talkative2.dummy
@@ -61,6 +61,8 @@ function Talkative2.Init()
   -----------------------------
   -- ChatFrame 1 is a special
   FCF_DockFrame(ChatFrame1, 1)
+  FCF_SelectDockFrame(ChatFrame1)
+
   FCF_SetWindowName(ChatFrame1, "GEN")
   ChatFrame1:SetUserPlaced(true)
   ChatFrame1:ClearAllPoints()
@@ -70,11 +72,14 @@ function Talkative2.Init()
   ChatFrame1:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 8, 39)
   ChatFrame1.SetPoint = function() end
   ChatFrame1:Show()
+
   ChatFrame_RemoveAllChannels(ChatFrame1)
   ChatFrame_RemoveAllMessageGroups(ChatFrame1)
   for i,v in pairs(groups[ChatFrame1]) do ChatFrame_AddMessageGroup(ChatFrame1, v) end
   ChatFrame_AddChannel(ChatFrame1, GENERAL)
   ChatFrame_AddChannel(ChatFrame1, "Trade")
+
+  FCF_SetWindowAlpha(ChatFrame1, 0)
 
   FCF_SetWindowName(ChatFrame2, "LOG") -- CombatLog just requires a rename nothing else
 
@@ -85,9 +90,8 @@ function Talkative2.Init()
 
   -- Selecting Gen as base thanks to Phanx!
   FCF_Tab_OnClick(ChatFrame1Tab, "LeftButton")
-  -- making sure the toast window doesn't move offscreen ;)
-  BN_TOAST_LEFT_OFFSET = BN_TOAST_LEFT_OFFSET + ChatFrame1ButtonFrame:GetWidth() + 5
 
+  -- Colors for the chat
   for globalChannels = 1, 30 do
     ToggleChatColorNamesByClassGroup(true, "CHANNEL"..globalChannels)
   end
