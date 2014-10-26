@@ -2,8 +2,8 @@
 -- Setting up the local scope
 ------------------------------------------------------------------------
 local _, Talkative2 = ...
--- Table to keep track of frames you already saw:
-local frames = {}
+
+local frames = Talkative2.frames
 
 ------------------------------------------------------------------------
 -- Editbox
@@ -46,7 +46,7 @@ function Talkative2.skin(frame)
   editbox.SetTextInsets = function(self)
     orig(self, self.header:GetWidth(), 0, 0, 0)
   end
-   frames[frame] = true
+  frames[frame] = true
 end
 
 for i = 1, NUM_CHAT_WINDOWS do

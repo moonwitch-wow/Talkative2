@@ -4,6 +4,8 @@
 local _, Talkative2 = ...
 local handler = CreateFrame("Frame")
 
+local frames = Talkative2.frames
+
 ------------------------------------------------------------------------
 -- Functions
 ------------------------------------------------------------------------

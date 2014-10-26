@@ -3,6 +3,8 @@
 ------------------------------------------------------------------------
 local _, Talkative2 = ...
 
+Talkative2.frames = {}
+
 local groups = {
   [ChatFrame1] = {"CHANNEL", "SAY", "EMOTE", "TEXT_EMOTE",
                   "YELL", "SYSTEM", "SYSTEM_NOMENU", "ERRORS", "IGNORED",
