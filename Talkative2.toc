@@ -10,15 +10,6 @@
 ## X-Curse-Project-ID: Talkative2
 ## X-WoWI-ID: xxx
 
-# Dependencies:
-# OptionalDeps:
-
-# LoadOnDemand: 0|1
-# LoadWith:
-
-#SavedVariables:
-#SavedVariablesPerCharachter:
-
 setup.lua
 flash.lua
 visual.lua

@@ -9,9 +9,9 @@ local frames = Talkative2.frames
 ------------------------------------------------------------------------
 -- Functions
 ------------------------------------------------------------------------
-function Talkative2.PLAYER_ENTERING_WORLD(...)
-  print('Talkative2 Loaded') -- debugging purposes
-end
+-- function Talkative2.PLAYER_ENTERING_WORLD(...)
+--   print('Talkative2 Loaded') -- debugging purposes
+-- end
 
 function Talkative2.PLAYER_LOGIN(...)
   Talkative2.Init()
