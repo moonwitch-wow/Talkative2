@@ -60,9 +60,16 @@ end
 --skin temporary chats
 ------------------------------------------------------------------------
 -- Set up a dirty hook to catch temporary windows and customize them when they are created:
-local old_OpenTemporaryWindow = FCF_OpenTemporaryWindow
-FCF_OpenTemporaryWindow = function(...)
-    local frame = old_OpenTemporaryWindow(...)
-    Talkative2.skin(frame)
-    return frame
-end
+-- local old_OpenTemporaryWindow = FCF_OpenTemporaryWindow
+-- FCF_OpenTemporaryWindow = function(...)
+--   local frame = old_OpenTemporaryWindow(...)
+--   Talkative2.skin(frame)
+--   return frame
+-- end
+
+hooksecurefunc("FCF_OpenTemporaryWindow", function(...)
+  local cf = FCF_GetCurrentChatFrame():GetName() or nil
+  if cf then
+    Talkative2.skin(cf)
+  end
+end)
