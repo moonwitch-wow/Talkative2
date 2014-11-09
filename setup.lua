@@ -91,6 +91,9 @@ function Talkative2.Init()
   -- Selecting Gen as base thanks to Phanx!
   FCF_Tab_OnClick(ChatFrame1Tab, "LeftButton")
 
+  -- Re-enable chatfade
+  for i=1, NUM_CHAT_WINDOWS do _G["ChatFrame"..i]:SetFading(true) end
+
   -- Colors for the chat
   for globalChannels = 1, 30 do
     ToggleChatColorNamesByClassGroup(true, "CHANNEL"..globalChannels)
