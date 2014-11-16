@@ -18,7 +18,7 @@ function Talkative2.skin(frame)
   frame:SetFont(STANDARD_TEXT_FONT, 12, nil)
   frame:SetShadowOffset(1, -1)
   frame:SetSpacing(1.4)
-  FCF_SetChatWindowFontSize(nil, frame, 13) -- Change the chat frame font
+  FCF_SetChatWindowFontSize(nil, frame, 12) -- Change the chat frame font
   frame:SetClampedToScreen(false) -- allows moving to edge of screen
   frame:SetClampRectInsets(0,0,0,0) -- allows moving to edge of screen
 
@@ -30,16 +30,17 @@ function Talkative2.skin(frame)
   editbox:ClearAllPoints()
   editbox:SetPoint('BOTTOMRIGHT', ChatFrame1, 'TOPRIGHT', 0, 20)
   editbox:SetPoint('BOTTOMLEFT', ChatFrame1, 'TOPLEFT', 0, 20)
-  editbox:SetFont(STANDARD_TEXT_FONT, 13, nil)
+  editbox:SetFont(STANDARD_TEXT_FONT, 12, nil)
   editbox:SetShadowOffset(1,-1)
 
   editbox.focusLeft:SetTexture(nil)
   editbox.focusMid:SetTexture(nil)
   editbox.focusRight:SetTexture(nil)
 
+  -- Text that indicates in which chan you're talking
   editbox.header:ClearAllPoints()
   editbox.header:SetPoint('LEFT')
-  editbox.header:SetFont(STANDARD_TEXT_FONT, 13, nil)
+  editbox.header:SetFont(STANDARD_TEXT_FONT, 12, nil)
   editbox.header:SetShadowOffset(1, -1)
 
   local orig = editbox.SetTextInsets
