@@ -15,8 +15,7 @@ local groups = {
                   "BATTLEGROUND", "BATTLEGROUND_LEADER", "BG_SYSTEM_HORDE", "BG_SYSTEM_ALLIANCE",
                   "BG_SYSTEM_NEUTRAL", "EMOTE", "YELL", "MONSTER_SAY", "MONSTER_YELL",
                   "MONSTER_WHISPER", "MONSTER_EMOTE", "MONSTER_BOSS_EMOTE", "MONSTER_BOSS_WHISPER",
-                  "RAID_BOSS_WHISPER", "RAID_BOSS_EMOTE", "RAID_BOSS_WHISPER", "RAID_BOSS_EMOTE",
-                  "SYSTEM", "INSTANCE_CHAT", "INSTANCE_CHAT_LEADER"},
+                  "RAID_BOSS_WHISPER", "RAID_BOSS_EMOTE", "RAID_BOSS_WHISPER", "RAID_BOSS_EMOTE", "INSTANCE_CHAT", "INSTANCE_CHAT_LEADER"},
   [ChatFrame5] = {"COMBAT_XP_GAIN", "COMBAT_MISC_INFO", "COMBAT_HONOR_GAIN", "COMBAT_FACTION_CHANGE",
                   "LOOT", "SKILL", "CURRENCY", "MONEY", "ROLL", "OPENING", "COMBAT_MISC_INFO"},
   [ChatFrame6] = {"WHISPER", "WHISPER_INFROM", "REPLY", "BN_WHISPER", "BN_CONVERSATION",
@@ -67,8 +66,8 @@ function Talkative2.Init()
   ChatFrame1:SetUserPlaced(true)
   ChatFrame1:ClearAllPoints()
   ChatFrame1.ClearAllPoints = function() end
-  ChatFrame1:SetWidth(UIParent:GetWidth()/3.25)
-  ChatFrame1:SetHeight(math.floor(UIParent:GetHeight()/10)-1)
+  ChatFrame1:SetWidth(UIParent:GetWidth()/2.75)
+  ChatFrame1:SetHeight(math.floor(UIParent:GetHeight()/8)-1)
   ChatFrame1:SetPoint("BOTTOMLEFT", UIParent, "BOTTOMLEFT", 8, 39)
   ChatFrame1.SetPoint = function() end
   ChatFrame1:Show()
