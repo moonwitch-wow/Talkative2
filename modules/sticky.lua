@@ -14,10 +14,10 @@ ChatTypeInfo["WHISPER"]                = { sticky = 1, flashTab = true, flashTab
 ChatTypeInfo["WHISPER_INFORM"]         = { sticky = 0, flashTab = true, flashTabOnGeneral = false }
 ChatTypeInfo["REPLY"]                  = { sticky = 1, flashTab = true, flashTabOnGeneral = false }
 ChatTypeInfo["RAID_LEADER"]            = { sticky = 1, flashTab = true, flashTabOnGeneral = false }
-ChatTypeInfo["RAID_WARNING"]           = { sticky = 0, flashTab = true, flashTabOnGeneral = true }
+ChatTypeInfo["RAID_WARNING"]           = { sticky = 0, flashTab = true, flashTabOnGeneral = false }
 ChatTypeInfo["INSTANCE_CHAT"]          = { sticky = 1, flashTab = true, flashTabOnGeneral = false }
-ChatTypeInfo["INSTANCE_CHAT_LEADER"]   = { sticky = 1, flashTab = true, flashTabOnGeneral = true }
-ChatTypeInfo["PARTY_LEADER"]           = { sticky = 1, flashTab = true, flashTabOnGeneral = true }
-ChatTypeInfo["BN_WHISPER"]             = { sticky = 1, flashTab = true, flashTabOnGeneral = true }
+ChatTypeInfo["INSTANCE_CHAT_LEADER"]   = { sticky = 1, flashTab = true, flashTabOnGeneral = false }
+ChatTypeInfo["PARTY_LEADER"]           = { sticky = 1, flashTab = true, flashTabOnGeneral = false }
+ChatTypeInfo["BN_WHISPER"]             = { sticky = 1, flashTab = true, flashTabOnGeneral = false }
 ChatTypeInfo["BN_WHISPER_INFORM"]      = { sticky = 0, flashTab = true, flashTabOnGeneral = false }
 ChatTypeInfo["BN_CONVERSATION"]        = { sticky = 1, flashTab = true, flashTabOnGeneral = false }
